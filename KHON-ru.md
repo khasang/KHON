@@ -118,7 +118,7 @@ bindings:
     </binding>
 </bindings>
 ```
-или
+или  
 *Символов с пробелами: 232*
 ```
 <bindings>
