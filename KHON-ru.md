@@ -106,3 +106,73 @@ person
       2004-11-11
       Developer
 ```
+#Сравнение с YAML
+##Краткое
+Вот исходная конфигурация представленная в виде таблицы (from wiki):
+
+| событие IRC       | команда                | регулярное выражение |
+| ------------- |:------------------:| -----:|
+| PRIVMSG    | newUri    |  	"^http://.*" |
+| PRIVMSG     | deleteUri |   "^delete.*" |
+| PRIVMSG  | randomUri         |    "^random.*" |
+
+KHON
+```
+bindings
+  ircEvent
+  method
+  regexp
+  
+  PRIVMSG
+  newUri
+  '^http://.*'
+  
+  PRIVMSG
+  deleteUri
+  '^delete.*'
+  
+  PRIVMSG
+  randomUri
+  '^random.*'
+```
+В YAML эта конфигурация может быть представлена следующим образом:
+```
+bindings:
+  - ircEvent: PRIVMSG
+    method: newUri
+    regexp: '^http://.*'
+  - ircEvent: PRIVMSG
+    method: deleteUri
+    regexp: '^delete.*'
+  - ircEvent: PRIVMSG
+    method: randomUri
+    regexp: '^random.*'
+```
+Для сравнения, в XML-представлении, данная конфигурация может быть представлена следующим образом:
+```
+<bindings>
+    <binding>
+        <ircEvent>PRIVMSG</ircEvent>
+        <method>newUri</method>
+        <regex>^http://.*</regex>
+    </binding>
+    <binding>
+        <ircEvent>PRIVMSG</ircEvent>
+        <method>deleteUri</method>
+        <regex>^delete.*</regex>
+    </binding>
+    <binding>
+        <ircEvent>PRIVMSG</ircEvent>
+        <method>randomUri</method>
+        <regex>^random.*</regex>
+    </binding>
+</bindings>
+```
+или
+```
+<bindings>
+    <binding ircEvent="PRIVMSG" method="newUri" regex="^http://.*" />
+    <binding ircEvent="PRIVMSG" method="deleteUri" regex="^delete.*" />
+    <binding ircEvent="PRIVMSG" method="randomUri" regex="^random.*" />
+</bindings>
+```
