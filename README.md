@@ -1,5 +1,6 @@
 # KHON
 Khasang Object Notation -- new generation of JSON.  
+Inspired by Groovy and Python.  
 **50% in less than JSON.**  
 Three times less than the XML.  
 # Links
