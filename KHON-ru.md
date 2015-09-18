@@ -256,20 +256,40 @@ ShoppingList
   cocoa
   juice
 ```
-##Сопоставления имени и значения
+##Сопоставления имени и значения (Отображение, карта)
+###Ключ из одного слова, значение из одного слова
+```
+person
+  name John
+  age 33
+```
+###Ключ из одного слова, значение многословное
 ```
 person
   name John Smith
   age 33
 ```
-##Блочные литералы
+###Ключ из нескольких слов, значение многословное
 ```
+person
+  "first name" John Smith
+  age 33
+```
+##Блочные литералы (строка с переносами)
+```
+note
   """
   Quick brown fox
   jumb over the lazy dog
   """
 ```
 ##Список из отображений
+| name       | age                |
+| ------------- |:------------------:|
+| John Smith    | 33    |
+| Mary Smith     | 27 |
+| Jerry Smith  | 11         |
+| Kitty Smith  | 4         |
 ```
 persons
   name
@@ -280,6 +300,12 @@ persons
   
   Mary Smith
   27
+  
+  Jerry Smith
+  11
+  
+  Kitty Smith
+  4
 ```
 ##Сопоставления из последовательностей
 ```
