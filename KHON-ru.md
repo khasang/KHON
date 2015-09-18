@@ -176,3 +176,45 @@ bindings:
     <binding ircEvent="PRIVMSG" method="randomUri" regex="^random.*" />
 </bindings>
 ```
+#Пример с корзиной магазина
+KHON
+```
+backet
+  orderID 12345
+  shopperName John Smith
+  shopperEmail johnsmith@example.com
+  contents
+    productID 
+    productName 
+    quantity
+    
+    34
+    SuperWidget
+    1
+    
+    56
+    WonderWidget
+    3
+  orderCompleted true
+```
+JSON
+```
+{
+  "orderID": 12345,
+  "shopperName": "John Smith",
+  "shopperEmail": "johnsmith@example.com",
+  "contents": [
+    {
+      "productID": 34,
+      "productName": "SuperWidget",
+      "quantity": 1
+    },
+    {
+      "productID": 56,
+      "productName": "WonderWidget",
+      "quantity": 3
+    }
+  ],
+  "orderCompleted": true
+}
+```
