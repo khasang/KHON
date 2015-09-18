@@ -2,7 +2,7 @@
 Khasang Object Notation -- new generation of JSON.  
 Inspired by Groovy and Python.  
 
-## Make your code pure and simple
+## Make your data pure and simple
 **50% in less than JSON.**  
 Three times less than the XML.  
 # Links
