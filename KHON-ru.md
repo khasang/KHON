@@ -3,7 +3,53 @@
 Khasang Object Notation (от JSON -- JavaScript Object Notation)
 #Цель
 Обточим JSON, уберем все лишнее, категорически уменьшим объем передаваемого текста, но оставим максимальную читабельность
-#Пример
+#Сравнение KHON, JSON, XML
+##KHON
+```
+person
+  firstName Иван
+  lastName Иванов
+  address
+    streetAddress Московское ш., 101, кв.101
+    city Ленинград
+    postalCode 101101
+  phoneNumbers
+    812 123-1234
+    916 123-4567
+```
+##JSON
+```
+{
+   "firstName": "Иван",
+   "lastName": "Иванов",
+   "address": {
+       "streetAddress": "Московское ш., 101, кв.101",
+       "city": "Ленинград",
+       "postalCode": 101101
+   },
+   "phoneNumbers": [
+       "812 123-1234",
+       "916 123-4567"
+   ]
+}
+```
+##XML
+```
+<person>
+  <firstName>Иван</firstName>
+  <lastName>Иванов</lastName>
+  <address>
+    <streetAddress>Московское ш., 101, кв.101</streetAddress>
+    <city>Ленинград</city>
+    <postalCode>101101</postalCode>
+  </address>
+  <phoneNumbers>
+    <phoneNumber>812 123-1234</phoneNumber>
+    <phoneNumber>916 123-4567</phoneNumber>
+  </phoneNumbers>
+</person>
+```
+#Более подробный пример
 ```
   Person
     Name Ivan Ivanov
