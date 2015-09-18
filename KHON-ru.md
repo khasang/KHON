@@ -220,3 +220,73 @@ backet
 ```
 #Синтаксические элементы
 ##Последовательности
+###Название последовательности из одного слова, все элементы списка из одного слова
+```
+Films
+  Casablanca
+  Spellbound
+  Notorious
+ShoppingList
+  milk
+  bread
+  cocoa
+  juice
+```
+###Название последовательности из нескольких слов, все элементы списка из одного слова
+```
+"Список фильмов"
+  Casablanca
+  Spellbound
+  Notorious
+"Список покупок"
+  milk
+  bread
+  cocoa
+  juice
+```
+###Название последовательности из одного слова, некоторые элементы списка из нескольких слов
+```
+Films
+  "Black Casablanca"
+  Spellbound
+  Notorious
+ShoppingList
+  "milk 3.2%"
+  "white bread"
+  cocoa
+  juice
+```
+##Сопоставления имени и значения
+```
+person
+  name John Smith
+  age 33
+```
+##Блочные литералы
+```
+  """
+  Quick brown fox
+  jumb over the lazy dog
+  """
+```
+##Список из отображений
+```
+persons
+  name
+  age
+  
+  John Smith
+  33
+  
+  Mary Smith
+  27
+```
+##Сопоставления из последовательностей
+```
+men
+  "John Smith"
+  "Bill Jones"
+women
+  "Mary Smith"
+  "Susan Williams"
+```
