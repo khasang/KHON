@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bookstore>
+    <book id='1'>
+        <title>Гарри Поттер и философский камень </title>
+        <author>Джоан Ролинг</author>
+        <cost>500</cost>
+        <quantity>15</quantity>
+    </book>
+    <book id='2'>
+        <title>Дракула</title>
+        <author>Брэм Стокер</author>
+        <cost>430</cost>
+        <quantity>5</quantity>
+    </book>
+    <book id='3'>
+        <title>Преступление и наказание</title>
+        <author>Федор Достоевский</author>
+        <cost>400</cost>
+        <quantity>10 </quantity>
+    </book>
+    <book id='4'>
+        <title>Страх и отвращение в Лас-Вегасе</title>
+        <author>Хантер Томпсон</author>
+        <cost>340</cost>
+        <quantity>12</quantity>
+    </book>
+    <book id='5'>
+        <title>Кафка на пляже</title>
+        <author>Харуки Мураками</author>
+        <cost>340 </cost>
+        <quantity>16</quantity>
+    </book>
+    <book id='6'>
+        <title>Охота на овец</title>
+        <author>Харуки Мураками</author>
+        <cost>345 </cost>
+        <quantity>14</quantity>
+    </book>
+    <book id='7'>
+        <title>Ромео и Джульетта</title>
+        <author>Уильям Шекспир</author>
+        <cost>330</cost>
+        <quantity>5</quantity>
+    </book>
+    <book id='8'>
+        <title>Война и мир. В двух томах.</title>
+        <author>Лев Толстой</author>
+        <cost>480 </cost>
+        <quantity>3</quantity>
+    </book>
+    <book id='9'>
+        <title>Властелин колец. Трилогия</title>
+        <author>Джон Толкин</author>
+        <cost>500 </cost>
+        <quantity>8</quantity>
+    </book>
+    <book id='10'>
+        <title>Хобит.</title>
+        <author>Джон Толкин</author>
+        <cost>460 </cost>
+        <quantity>6</quantity>
+    </book>
+    <book id='11'>
+        <title>Мастер и Маргарита</title>
+        <author>Михаил Булгаков</author>
+        <cost>300</cost>
+        <quantity>5</quantity>
+    </book>
+    <book id='12'>
+        <title>Русские народные сказки.</title>
+        <author>Неизвестен.</author>
+        <cost>600 </cost>
+        <quantity>7</quantity>
+    </book>
+    <book id='13'>
+        <title>Руслан и Людмила</title>
+        <author>Александр Пушкин</author>
+        <cost>320 </cost>
+        <quantity>6</quantity>
+    </book>
+</bookstore>
