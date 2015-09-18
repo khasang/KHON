@@ -172,61 +172,127 @@ backet
 }
 ```
 ##Четвертый пример
+###KHON
+*Символов с пробелами: 612*
 ```
-  Person
-    Name Ivan Ivanov
-    Email ivan@ru.ru
-    Address 
-        Country Russian Federation
-        City Moscow
-        Street Ivanovskaya, 11-22
-    Phone
-        Mob 915-555-5555
-        Office 777-55-55
-    HeLikes
-        Cars
-        Apple
-        Travel
-    WishList
-        Name
-        Manufacturer
-        Quantity
-        Notes
-
-        Dodge
-        General Motors
-        1
-
-        MacBook Pro
-        Apple
-        2
-        15 inch
-        
-        Lamp
-        No matters
-    WorksOn
-        Google
-        Khasang
-    CV
-      Company name
-      Date to
-      Date from
-      Position
-
-      Khasang
-      now
-      2008-01-01
-      Architect
-      
-      Google
-      2004-11-11
-      2008-01-01
-      Manager
-      
-      Yandex
-      2000-03-03
-      2004-11-11
-      Developer
+Person
+  Name Ivan Ivanov
+  Email ivan@ru.ru
+  Address
+    Country Russian Federation
+    City Moscow
+    Street Ivanovskaya, 11-22
+  Phone
+    Mob 915-555-5555
+    Office 777-55-55
+  HeLikes
+    Cars
+    Apple
+    Travel
+  WishList
+    Name
+    Manufacturer
+    Quantity
+    Notes
+    
+    Dodge
+    General Motors
+    1
+    
+    MacBook Pro
+    Apple
+    2
+    15 inch
+    
+    Lamp
+    No matters
+  WorksOn
+    Google
+    Khasang
+  CV
+    Company name
+    Date to
+    Date from
+    Position
+    
+    Khasang
+    now
+    2008-01-01
+    Architect
+    
+    Google
+    2004-11-11
+    2008-01-01
+    Manager
+    
+    Yandex
+    2000-03-03
+    2004-11-11
+    Developer
+```
+###JSON
+*Символов с пробелами: 1006 (на 64% больше, чем KHON!)*
+```
+{
+  "Name": "Ivan Ivanov",
+  "Email": "ivan@ru.ru",
+  "Address":
+  {
+    "Country": "Russian Federation",
+    "City": "Moscow",
+    "Street": "Ivanovskaya, 11-22"
+  },
+    "Phone":{
+    "Mob": "915-555-5555",
+    "Office": "777-55-55"
+  },
+  "HeLikes": [
+    "Cars",
+    "Apple",
+    "Travel"
+  ],
+  "WishList": [
+    {
+      "Name": "Dodge",
+      "Manufacturer": "General Motors",
+      "Quantity": 1
+    },
+    {
+      "Name": "MacBook Pro""
+      "Manufacturer": "Apple"
+      "Quantity": 2
+      "Notes": "15 inch"
+    },
+    {
+      "Name": "Lamp"
+      "Manufacturer": "No matters"
+    }
+  ],
+  "WorksOn": [
+    "Google",
+    "Khasang"
+  ],
+  "CV": [
+    {
+      "Company name": "Khasang",
+      "Date to": "now",
+      "Date from": "2008-01-01",
+      "Position": "Architect"
+    },
+    {
+      "Company name": "Google"
+      "Date to": "2004-11-11"
+      "Date from": "2008-01-01"
+      "Position": "Manager"
+    },
+    {
+      "Company name": "Yandex"
+      "Date to": "2000-03-03"
+      "Date from": "2004-11-11"
+      "Position": "Developer"
+    }
+  ]
+}
 ```
 #Синтаксические элементы
 ##Последовательности
