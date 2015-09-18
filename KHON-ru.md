@@ -284,6 +284,7 @@ note
   """
 ```
 ##Список из отображений
+###Все поля используются
 | name       | age                |
 | ------------- |:------------------:|
 | John Smith    | 33    |
@@ -307,12 +308,34 @@ persons
   Kitty Smith
   4
 ```
-##Сопоставления из последовательностей
+###Поля опциональны справа налево
+Как при передаче аргументов в функцию
+
+| name       | age                |notes                |
+| ------------- |:------------------:|------------------:|
+| John Smith    | 33    |like snowboard |
+| Mary Smith     | 27 |teacher |
+| Jerry Smith  | 11         |   |
+| Kitty Smith  | 4         |too small |
+
 ```
-men
-  "John Smith"
-  "Bill Jones"
-women
-  "Mary Smith"
-  "Susan Williams"
+persons
+  name
+  age
+  notes
+  
+  John Smith
+  33
+  like snowboard
+  
+  Mary Smith
+  27
+  teacher
+  
+  Jerry Smith
+  11
+  
+  Kitty Smith
+  4
+  too small
 ```
