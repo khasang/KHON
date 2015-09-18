@@ -1,5 +1,7 @@
 # KHON
-Khasang Object Notation -- new generation of JSON
+Khasang Object Notation -- new generation of JSON.  
+**50% in less than JSON.**  
+Three times less than the XML.  
 # Links
 English: (available soon)  
 На русском: https://github.com/khasang/KHON/blob/master/KHON-ru.md
