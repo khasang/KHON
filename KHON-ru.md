@@ -7,6 +7,7 @@ Khasang Object Notation (от JSON -- JavaScript Object Notation)
 #Сравнение KHON, JSON, XML
 ##Первый пример
 ###KHON
+*Символов с пробелами: 181*
 ```
 person
   firstName Иван
@@ -20,6 +21,7 @@ person
     "916 123-4567"
 ```
 ###JSON
+*Символов с пробелами: 243*
 ```
 {
    "firstName": "Иван",
@@ -36,6 +38,7 @@ person
 }
 ```
 ###XML
+*Символов с пробелами: 339*
 ```
 <person>
   <firstName>Иван</firstName>
@@ -61,6 +64,7 @@ person
 | PRIVMSG  | randomUri         |    "^random.*" |
 
 ###KHON
+*Символов с пробелами: 137*
 ```
 bindings
   ircEvent
@@ -80,6 +84,7 @@ bindings
   '^random.*'
 ```
 ###YAML
+*Символов с пробелами: 202*
 ```
 bindings:
   - ircEvent: PRIVMSG
@@ -93,6 +98,7 @@ bindings:
     regexp: '^random.*'
 ```
 ###XML
+*Символов с пробелами: 406*
 ```
 <bindings>
     <binding>
@@ -113,6 +119,7 @@ bindings:
 </bindings>
 ```
 или
+*Символов с пробелами: 232*
 ```
 <bindings>
     <binding ircEvent="PRIVMSG" method="newUri" regex="^http://.*" />
