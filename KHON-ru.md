@@ -4,7 +4,8 @@ Khasang Object Notation (от JSON -- JavaScript Object Notation)
 #Цель
 Обточим JSON, уберем все лишнее, категорически уменьшим объем передаваемого текста, но оставим максимальную читабельность
 #Сравнение KHON, JSON, XML
-##KHON
+##Первый пример
+###KHON
 ```
 person
   firstName Иван
@@ -17,7 +18,7 @@ person
     "812 123-1234"
     "916 123-4567"
 ```
-##JSON
+###JSON
 ```
 {
    "firstName": "Иван",
@@ -33,7 +34,7 @@ person
    ]
 }
 ```
-##XML
+###XML
 ```
 <person>
   <firstName>Иван</firstName>
@@ -49,7 +50,118 @@ person
   </phoneNumbers>
 </person>
 ```
-#Более подробный пример
+##Второй пример
+Вот исходная конфигурация представленная в виде таблицы (from wiki):
+
+| событие IRC       | команда                | регулярное выражение |
+| ------------- |:------------------:| -----:|
+| PRIVMSG    | newUri    |  	"^http://.*" |
+| PRIVMSG     | deleteUri |   "^delete.*" |
+| PRIVMSG  | randomUri         |    "^random.*" |
+
+###KHON
+```
+bindings
+  ircEvent
+  method
+  regexp
+  
+  PRIVMSG
+  newUri
+  '^http://.*'
+  
+  PRIVMSG
+  deleteUri
+  '^delete.*'
+  
+  PRIVMSG
+  randomUri
+  '^random.*'
+```
+###YAML
+```
+bindings:
+  - ircEvent: PRIVMSG
+    method: newUri
+    regexp: '^http://.*'
+  - ircEvent: PRIVMSG
+    method: deleteUri
+    regexp: '^delete.*'
+  - ircEvent: PRIVMSG
+    method: randomUri
+    regexp: '^random.*'
+```
+###XML
+```
+<bindings>
+    <binding>
+        <ircEvent>PRIVMSG</ircEvent>
+        <method>newUri</method>
+        <regex>^http://.*</regex>
+    </binding>
+    <binding>
+        <ircEvent>PRIVMSG</ircEvent>
+        <method>deleteUri</method>
+        <regex>^delete.*</regex>
+    </binding>
+    <binding>
+        <ircEvent>PRIVMSG</ircEvent>
+        <method>randomUri</method>
+        <regex>^random.*</regex>
+    </binding>
+</bindings>
+```
+или
+```
+<bindings>
+    <binding ircEvent="PRIVMSG" method="newUri" regex="^http://.*" />
+    <binding ircEvent="PRIVMSG" method="deleteUri" regex="^delete.*" />
+    <binding ircEvent="PRIVMSG" method="randomUri" regex="^random.*" />
+</bindings>
+```
+##Третий пример с корзиной магазина
+###KHON
+```
+backet
+  orderID 12345
+  shopperName John Smith
+  shopperEmail johnsmith@example.com
+  contents
+    productID 
+    productName 
+    quantity
+    
+    34
+    SuperWidget
+    1
+    
+    56
+    WonderWidget
+    3
+  orderCompleted true
+```
+###JSON
+```
+{
+  "orderID": 12345,
+  "shopperName": "John Smith",
+  "shopperEmail": "johnsmith@example.com",
+  "contents": [
+    {
+      "productID": 34,
+      "productName": "SuperWidget",
+      "quantity": 1
+    },
+    {
+      "productID": 56,
+      "productName": "WonderWidget",
+      "quantity": 3
+    }
+  ],
+  "orderCompleted": true
+}
+```
+##Четвертый пример
 ```
   Person
     Name Ivan Ivanov
@@ -105,116 +217,4 @@ person
       2000-03-03
       2004-11-11
       Developer
-```
-#Сравнение с YAML
-##Краткое
-Вот исходная конфигурация представленная в виде таблицы (from wiki):
-
-| событие IRC       | команда                | регулярное выражение |
-| ------------- |:------------------:| -----:|
-| PRIVMSG    | newUri    |  	"^http://.*" |
-| PRIVMSG     | deleteUri |   "^delete.*" |
-| PRIVMSG  | randomUri         |    "^random.*" |
-
-KHON
-```
-bindings
-  ircEvent
-  method
-  regexp
-  
-  PRIVMSG
-  newUri
-  '^http://.*'
-  
-  PRIVMSG
-  deleteUri
-  '^delete.*'
-  
-  PRIVMSG
-  randomUri
-  '^random.*'
-```
-В YAML эта конфигурация может быть представлена следующим образом:
-```
-bindings:
-  - ircEvent: PRIVMSG
-    method: newUri
-    regexp: '^http://.*'
-  - ircEvent: PRIVMSG
-    method: deleteUri
-    regexp: '^delete.*'
-  - ircEvent: PRIVMSG
-    method: randomUri
-    regexp: '^random.*'
-```
-Для сравнения, в XML-представлении, данная конфигурация может быть представлена следующим образом:
-```
-<bindings>
-    <binding>
-        <ircEvent>PRIVMSG</ircEvent>
-        <method>newUri</method>
-        <regex>^http://.*</regex>
-    </binding>
-    <binding>
-        <ircEvent>PRIVMSG</ircEvent>
-        <method>deleteUri</method>
-        <regex>^delete.*</regex>
-    </binding>
-    <binding>
-        <ircEvent>PRIVMSG</ircEvent>
-        <method>randomUri</method>
-        <regex>^random.*</regex>
-    </binding>
-</bindings>
-```
-или
-```
-<bindings>
-    <binding ircEvent="PRIVMSG" method="newUri" regex="^http://.*" />
-    <binding ircEvent="PRIVMSG" method="deleteUri" regex="^delete.*" />
-    <binding ircEvent="PRIVMSG" method="randomUri" regex="^random.*" />
-</bindings>
-```
-#Пример с корзиной магазина
-KHON
-```
-backet
-  orderID 12345
-  shopperName John Smith
-  shopperEmail johnsmith@example.com
-  contents
-    productID 
-    productName 
-    quantity
-    
-    34
-    SuperWidget
-    1
-    
-    56
-    WonderWidget
-    3
-  orderCompleted true
-```
-JSON
-```
-{
-  "orderID": 12345,
-  "shopperName": "John Smith",
-  "shopperEmail": "johnsmith@example.com",
-  "contents": [
-    {
-      "productID": 34,
-      "productName": "SuperWidget",
-      "quantity": 1
-    },
-    {
-      "productID": 56,
-      "productName": "WonderWidget",
-      "quantity": 3
-    }
-  ],
-  "orderCompleted": true
-}
 ```
