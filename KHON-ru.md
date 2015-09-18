@@ -1,6 +1,6 @@
 #KHON -- Обезжиренная альтернатива JSON
 #Этимология
-Khasang Object Notation (от JSON -- JavaScript Object Notation)
+Khasang Object Notation (от JSON -- JavaScript Object Notation)  
 Хон -- обработка абразивным бруском.  
 #Цель
 Обточим JSON, уберем все лишнее, категорически уменьшим объем передаваемого текста, но оставим максимальную читабельность
