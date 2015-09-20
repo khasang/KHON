@@ -1,0 +1,76 @@
+web-app
+  version 2.4
+  schemaLocation http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd
+  display-name Example App
+  description A web.xml example
+  session-config
+    session-timeout 30
+  context-param
+    description Enable debugging for the application
+    param-name debug
+    param-value true
+  context-param
+    description Web master email
+    param-name webmaster
+    param-value webmaster@example.com
+  servlet
+    servlet-name action
+    servlet-class org.apache.struts.action.ActionServlet
+    init-param
+      param-name config
+      param-value /WEB-INF/struts-config.xml
+    load-on-startup 1
+  servlet-mapping
+    servlet-name action
+    url-pattern *.do
+  filter
+    filter-name loggingFilter
+    filter-class com.example.LoggingFilter
+    init-param
+      param-name appender
+      param-value com.example.FileAppender
+    init-param
+      param-name logging-file
+      param-value /var/logs/myapp.log
+  filter-mapping
+    filter-name loggingFilter
+    url-pattern /*
+  listener
+    listener-class com.example.listener.ContextListener
+  listener
+    listener-class com.example.listener.SessionListener
+  security-role
+    role-name admin
+  security-role
+    role-name editor
+  security-constraint
+    display-name Limit access to the /private folder
+    web-resource-collection
+      web-resource-name Protected directory
+      url-pattern /private/*
+    auth-constraint
+      role-name admin
+      role-name editor
+  login-config
+    auth-method BASIC
+    realm-name Editor Login
+  security-constraint
+    web-resource-collection
+      web-resource-name Member area
+      url-pattern /member/*
+    user-data-constraint
+      transport-guarantee CONFIDENTIAL
+  error-page
+    error-code 404
+    location /error404.jsp
+  error-page
+    exception-type java.lang.Throwable
+    location /errorThrowable.jsp
+  welcome-file-list
+    welcome-file index.jsp
+    welcome-file index.html
+    welcome-file index.htm
+  jsp-config
+    taglib
+      taglib-uri customtags
+      taglib-location /WEB-INF/jsp/customtaglib.tld
